@@ -20,7 +20,6 @@ class HomeScreen extends StatelessWidget {
                 //     builder: (context) => const Listview1Screen());
                 // Navigator.push(context, route);
                 // Navigator.pushReplacement(context, route);
-
                 Navigator.pushNamed(context, 'listview2');
               }),
           separatorBuilder: (_, __) => const Divider(),

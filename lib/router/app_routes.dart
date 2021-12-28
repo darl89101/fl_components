@@ -7,27 +7,27 @@ class AppRoutes {
 
   static final menuOptions = <MenuOption>[
     MenuOption(
-        url: 'home',
+        route: 'home',
         name: 'Home',
         screen: const HomeScreen(),
         icon: Icons.home_max_sharp),
     MenuOption(
-        url: 'listview1',
+        route: 'listview1',
         name: 'Listview tipo 1',
         screen: const Listview1Screen(),
         icon: Icons.list_alt),
     MenuOption(
-        url: 'listview2',
+        route: 'listview2',
         name: 'Listview tipo 2',
         screen: const Listview2Screen(),
         icon: Icons.list),
     MenuOption(
-        url: 'alert',
+        route: 'alert',
         name: 'Alertas - Alerts',
         screen: const HomeScreen(),
         icon: Icons.add_alert_sharp),
     MenuOption(
-        url: 'card',
+        route: 'card',
         name: 'Tarjetas - Cards',
         screen: const HomeScreen(),
         icon: Icons.credit_card)
@@ -36,8 +36,12 @@ class AppRoutes {
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRputes = {};
 
-    for (var i = 0; i < menuOptions.length; i++) {
-      appRputes[menuOptions[i].url] = (_) => menuOptions[i].screen;
+    // for (var i = 0; i < menuOptions.length; i++) {
+    //   appRputes[menuOptions[i].url] = (_) => menuOptions[i].screen;
+    // }
+    for (final item in menuOptions) {
+      // appRputes[item.url] = (_) => item.screen;
+      appRputes.addAll({ item.route: (_) => item.screen });
     }
 
     return appRputes;
