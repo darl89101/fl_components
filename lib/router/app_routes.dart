@@ -24,12 +24,12 @@ class AppRoutes {
     MenuOption(
         route: 'alert',
         name: 'Alertas - Alerts',
-        screen: const HomeScreen(),
+        screen: const AlertScreen(),
         icon: Icons.add_alert_sharp),
     MenuOption(
         route: 'card',
         name: 'Tarjetas - Cards',
-        screen: const HomeScreen(),
+        screen: const CardScreen(),
         icon: Icons.credit_card)
   ];
 

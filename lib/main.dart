@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:fl_components/router/app_routes.dart';
 
 void main() => runApp(const MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: true,
       title: 'Material App',
       // home: const Listview2Screen(),
